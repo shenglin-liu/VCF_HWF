@@ -1,26 +1,20 @@
 # VCF_HWF
 Filter away SNPs that are out of Hardy-Weinberg equilibrium (HWE) from a VCF file.
 
-# Usage
-On a linux system (R must be installed), download the script to any folder you desire. Change the execution mode by running:
+## Usage
+On a linux system (R must be installed), download the script to any folder you desire. Change the execution mode by running:<br>
+`chmod a+x [path_to]/VCF_HWF.r`
 
-	chmod a+x [path_to]/VCF_HWF.r
+Run the script by typing:<br>
+`[path_to]/VCF_HWF.r $vcf_file $popmap_file $min_pop_HWE $out_vcf`
 
-Run the script by typing:
+* vcf_file: the input file in VCF format.
+* popmap_file: a population map file in the same format as in [Stacks](https://catchenlab.life.illinois.edu/stacks/manual/).
+* min_pop_HWE: minimum number of populations in HWE for a SNP to be kept.
+* out_vcf: name of the new VCF file to output.
 
-	[path_to]/VCF_HWF.r $vcf_file $popmap_file $min_pop_HWE $out_vcf
+## Requirements for the input
+* The genotype fields of the VCF file must start with GT tag.
+* The SNPs must be biallelic, with 0 representing REF and 1 for ALT.
 
-vcf_file: the input file in VCF format.
-
-popmap_file: a population map file in the same format as in Stacks (https://catchenlab.life.illinois.edu/stacks/manual/).
-
-min_pop_HWE: minimum number of populations in HWE for a SNP to be kept.
-
-out_vcf: name of the new VCF file to output.
-
-# Requirements for the input
-The genotype fields of the VCF file must start with GT tag.
-
-The SNPs must be biallelic, with 0 representing REF and 1 for ALT.
-
-# To cite
+## To cite
