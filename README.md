@@ -18,5 +18,6 @@ Run the script by typing:
 ## Requirements for the input
 * The genotype fields of the VCF file must start with GT tag.
 * The SNPs must be biallelic, with 0 representing REF and 1 for ALT.
+* There is no limitation for the size of the VCF file.
 
 ## To cite
